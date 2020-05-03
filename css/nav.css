@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+
+:root {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  --text-primary: #8AB898;
+  --text-secondary: #FAFAFA;
+  --bg-primary: #192229;
+  --bg-secondary: #8AB898;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  padding: 0.6rem;
+  cursor: context-menu;
+  transition: background-color 200ms ease;
+  transition: color 200ms ease;
+}
+
+.nav-link {
+  cursor: context-menu;
+}
+
+.link-text {
+  display: none;  
+  margin-left: 2rem;
+}
+
+svg:hover {
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+}
+
+.navbar {
+  width: 7rem;
+  height: 100vh;
+  position: fixed;
+  background-color: var(--bg-primary);
+  /* transition: width 200ms ease;*/
+}
+/*
+.navbar:hover {
+  width: 16rem;
+}
+
+svg:hover + .link-text {
+  display: block;
+  margin-top: 0.5rem;
+  color: white;
+}
+*/
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  margin-left: 1.95rem;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+}
+
+.nav-item {
+  width: 100%;
+  margin-top: 0.6rem;
+  cursor: context-menu;
+  display: flex;
+}
+
+.nav-item:last-child {
+  margin-top: auto;
+  margin-bottom: 2rem;
+}
+
+.nav-item:first-child {
+  margin-top: 2rem;
+  margin-bottom: auto;
+}
+

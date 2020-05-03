@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+
+:root {
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  --text-primary: #8AB898;
+  --tabContent-bg-primary: #323D44;
+  --tag: #8A979F;
+  --date: #B1BBC2;
+  --sub-head: #626e77;
+}
+
+section {
+    margin-left: 7rem;
+    height: 100vh;
+}
+
+.tabContent {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 3rem);
+    background-color: var(--tabContent-bg-primary);
+
+}
+
+.header {
+    height: 30%;
+    margin: 0;
+    padding-left: 5rem;
+    padding-top: 3rem;
+    align-items: left;
+}
+
+.tag {
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: var(--tag);
+    margin-left: 0.1rem;
+    font-size: 0.8rem;
+}
+
+.date {
+    margin: 0;
+    font-weight: bold; 
+    font-size: 2.4rem;
+    color: var(--date);
+}
+
+.sub-head {
+    margin-top: 0.2rem;
+    margin-left: 0.15rem;
+    font-size: 1.2rem;
+    color: var(--sub-head);
+}
+
+.contentPanels { 
+    height: auto;
+}

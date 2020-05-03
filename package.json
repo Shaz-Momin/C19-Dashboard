@@ -1,0 +1,16 @@
+{
+  "name": "covid-19_tracker",
+  "version": "1.0.0",
+  "description": "A fully customizable online COVID-19 Tracker",
+  "main": "index.js",
+  "scripts": {
+    "test": "index.html"
+  },
+  "author": "Shaz Momin",
+  "license": "MIT",
+  "dependencies": {
+    "coronavirus-tracker": "^1.0.25",
+    "gitignore": "^0.6.0",
+    "live-server": "^1.2.1"
+  }
+}
