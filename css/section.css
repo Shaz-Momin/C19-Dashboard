@@ -9,6 +9,9 @@
   --tag: #8A979F;
   --date: #B1BBC2;
   --sub-head: #626e77;
+  --panel-title: #79868F;
+  --panel-subTitle: #8A979F;
+  --panel-active: 60,73,81;
 }
 
 section {
@@ -25,10 +28,12 @@ section {
 }
 
 .header {
-    height: 30%;
+    height: 20%;
     margin: 0;
     padding-left: 5rem;
     padding-top: 3rem;
+    padding-bottom: 3rem;
+    padding-right: 3rem;
     align-items: left;
 }
 
@@ -55,5 +60,48 @@ section {
 }
 
 .contentPanels { 
-    height: auto;
+    height: 75%;
+    margin: 0;
+    align-items: left;
+    overflow-y: scroll;
+}
+
+.panel {
+    padding-left: 3rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-right: 3rem;
+    transition: background-color 200ms ease;
+    cursor: context-menu;
+}
+
+.panelTitle {
+    font-size: 1.4rem;
+    margin-left: 2rem;
+    color: var(--panel-title);
+}
+
+.panelSubtitle {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+    color: var(--panel-subTitle);
+}
+
+#active {
+    background-color: rgb(var(--panel-active));
+}
+
+.panelTitle::before {
+    display: inline-block;
+    content: '';
+    height: 0.8rem;
+    width: 0.8rem;
+    border: none;
+    margin-right: 1.2rem;
+    background-color: var(--text-primary);
+}
+
+.panel:hover {
+    background-color: rgba(var(--panel-active), 0.4);
 }
