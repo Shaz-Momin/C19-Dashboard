@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    --bg-content: #3C4951;
+    --text-alterate: #E2CB94;
+    --text-figure: #E4E4E4;
+    --head-1: 4rem;
+    --head-2: 3.5rem;
+    --head-3: 3rem;
+    --head-4: 2.5rem;
+}
+
+.panelContent {
+    font-weight: bold;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-content);
+    align-items: center;
+    align-content: center;
+    letter-spacing: 0.1rem;
+}
+
+.contentHeader {
+    margin-top: 1.5rem;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--text-alterate);
+}
+
+.inner-container {
+    text-align: center;
+}
+
+.inner-container:last-child {
+    margin-left: 3rem;
+}
+
+.double {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.single {
+    margin: auto;
+    align-items: center;
+    align-content: center;
+}
+
+.container {
+    padding: 0.1rem;
+    text-align: center;
+}
+
+.container:last-child {
+    margin-bottom: 2rem;
+}
+
+.figure {
+    color: var(--text-figure);
+}
+
+.figSubtitle {
+    font-size: 1.1rem;
+    color: var(--text-primary);
+}
+
+#head1 {
+    font-size: var(--head-1);
+}
+
+#head2 {
+    font-size: var(--head-2);
+}
+
+#head3 {
+    font-size: var(--head-3);
+}
+
+#head4 {
+    font-size: var(--head-4);
+}
+

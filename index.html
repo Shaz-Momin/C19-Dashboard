@@ -10,6 +10,7 @@
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
    <link rel="stylesheet" type="text/css" href="css/nav.css" media="screen"/>
    <link rel="stylesheet" type="text/css" href="css/section.css" media="screen"/>
+   <link rel="stylesheet" type="text/css" href="css/content.css" media="screen"/>
 
    <title>C19 Dashboard</title>
 </head>
@@ -55,7 +56,7 @@
             <span class="link-text">LOGO</span>
          </li>
 
-         <li class="nav-item" onclick="openPage('home', this)" id="defaultOpen">
+         <li class="nav-item" onclick="openPage('home', this)">
             <svg
                   xmlns:dc="http://purl.org/dc/elements/1.1/"
                   xmlns:cc="http://creativecommons.org/ns#"
@@ -94,7 +95,7 @@
             <span class="link-text">Home</span>
          </li>
 
-         <li class="nav-item" onclick="openPage('stats', this)">
+         <li class="nav-item" onclick="openPage('stats', this)"  id="defaultOpen">
             <svg
 xmlns:dc="http://purl.org/dc/elements/1.1/"
 xmlns:cc="http://creativecommons.org/ns#"
@@ -293,33 +294,90 @@ aria-hidden="true">
 
    <main class="allSections">
       <section id="home" class="tabContent">
-         <h1>This is the Home Tab!</h1>
+         <div class="sectionPage">
+            <div class="header">
+               <div class="tag">Covid19 Api</div>
+               <div class="date">Monday, April 27 2020</div>
+               <div class="sub-head">Latest updated Statistics</div>
+            </div>
+   
+            <div class="contentPanels">
+               <div id="active" class="GDR panel">
+                  <div class="panelTitle">Global Data Reports</div>
+                  <div class="panelSubtitle">Worldwide Combined Data of cases, deaths, recoveries </div>
+               </div>        
+      
+               <div id="" class="USbyStates panel">
+                  <div class="panelTitle">United States by States</div>
+                  <div class="panelSubtitle">Total number of positive & negative test results</div>
+               </div>
+      
+               <div id="" class="Countries panel">
+                  <div class="panelTitle">Reports By Countries</div>
+                  <div class="panelSubtitle">Total deaths, cases, & recoveries</div>
+               </div>
+            </div>
+         </div>
       </section>
 
       <section id="stats" class="tabContent">
-         <div class="header">
-            <div class="tag">Covid19 Api</div>
-            <div class="date">Monday, April 27 2020</div>
-            <div class="sub-head">Latest updated Statistics</div>
+         <div class="sectionPage">
+            <div class="header">
+               <div class="tag">Covid19 Api</div>
+               <div class="date">Monday, April 27 2020</div>
+               <div class="sub-head">Latest updated Statistics</div>
+            </div>
+   
+            <div class="contentPanels">
+               <div id="active" class="GDR panel">
+                  <div class="panelTitle">Global Data Reports</div>
+                  <div class="panelSubtitle">Worldwide Combined Data of cases, deaths, recoveries </div>
+               </div>        
+      
+               <div id="" class="USbyStates panel">
+                  <div class="panelTitle">United States by States</div>
+                  <div class="panelSubtitle">Total number of positive & negative test results</div>
+               </div>
+      
+               <div id="" class="Countries panel">
+                  <div class="panelTitle">Reports By Countries</div>
+                  <div class="panelSubtitle">Total deaths, cases, & recoveries</div>
+               </div>
+            </div>
          </div>
 
-         <div class="contentPanels">
-            <div id="active" class="GDR panel">
-               <div class="panelTitle">Global Data Reports</div>
-               <div class="panelSubtitle">Worldwide Combined Data of cases, deaths, recoveries </div>
-            </div>        
-   
-            <div id="" class="USbyStates panel">
-               <div class="panelTitle">United States by States</div>
-               <div class="panelSubtitle">Total number of positive & negative test results</div>
+         <div id="GDR panel" class="panelContent">
+            <div class="contentHeader">Global</div>
+            <div class="single container">
+               <div class="figure g-total-cases" id="head1">#,###,###</div>
+               <div class="figSubtitle">Total Cases</div>
             </div>
-   
-            <div id="" class="Countries panel">
-               <div class="panelTitle">Reports By Countries</div>
-               <div class="panelSubtitle">Total deaths, cases, & recoveries</div>
+            <div class="double">
+               <div class="inner-container">
+                  <div class="figure g-total-deaths" id="head4">###,###</div>
+                  <div class="figSubtitle">Total Deaths</div>
+               </div>
+               <div class="inner-container">
+                  <div class="figure g-total-recovered" id="head4">###,###</div>
+                  <div class="figSubtitle">Total Recovered</div>
+               </div>
             </div>
-         </div>      
+            <div class="single container">
+               <div class="figure g-new-cases" id="head3">##,###</div>
+               <div class="figSubtitle">New Cases</div>
+            </div>
+            <div class="single container">
+               <div class="figure g-new-deaths" id="head3">##,###</div>
+               <div class="figSubtitle">New Deaths</div>
+            </div>
+            <div class="single container">
+               <div class="figure g-active-cases" id="head2">#,###,###</div>
+               <div class="figSubtitle">Active Cases</div>
+            </div>          
+         </div>
+         
       </section>
+
 
       <section id="articles" class="tabContent">
          <h1>This is the Articles Tab!</h1>

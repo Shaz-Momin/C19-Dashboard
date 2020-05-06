@@ -3,43 +3,36 @@ var total = "";
 var table = "";
 
 var url = "https://covid19-server.chrismichael.now.sh/api/v1/AllReports";
+updateData();
 
-$.getJSON(url,(dat) => {
-    fetch(dat);
-    //getTotal();
-    //getTable();
-
-    setWW();
-
-    function setWW() {
-        console.log("testing");
-        var ww = getWW();
-        document.getElementsByClassName("total cases")[0].innerHTML = "Cases: " + ww.TotalCases;
-        document.getElementsByClassName("total deaths")[0].innerHTML = "Deaths: " + ww.TotalDeaths;
-        document.getElementsByClassName("total recovered")[0].innerHTML = "Recovered: " + ww.TotalRecovered;
-        document.getElementsByClassName("total active-cases")[0].innerHTML = "Active Cases: " + ww.ActiveCases;
-
-    }
+function updateData() {
+    $.getJSON(url,(dat) => {
+        fetch(dat);
     
-});
-
-
-
-
-
-function fetch(data){
-    total = data.reports[0];
-    table = data.reports[0].table;
-    //console.log(table);
-
+        console.log(getWW());
+        setGlobalContent();
+    
+        function setGlobalContent() {
+            $(".g-total-cases").html(getWW().TotalCases); 
+            $(".g-total-deaths").html(getWW().TotalDeaths); 
+            $(".g-total-recovered").html(getWW().TotalRecovered); 
+            $(".g-new-cases").html(getWW().NewCases); 
+            $(".g-new-deaths").html(getWW().NewDeaths); 
+            $(".g-active-cases").html(getWW().ActiveCases); 
+        }
+        
+        function fetch(data){
+            total = data.reports[0];
+            table = data.reports[0].table;
+        }
+    
+        function getWW() {
+            return ("WorldWide: ", table[0][0]);
+        }
+    });
 }
 
-function getWW() {
-    console.log("getWW is called", total);
-    return ("WorldWide: ", getTable()[0][0]);
-}
-
-function getTable() {
-    return ("Table: ", table);
-
-}
+// Refreshes every 5000ms
+setInterval(function(){
+    updateData();
+}, 5000);

@@ -22,10 +22,14 @@ section {
 
 .tabContent {
     display: flex;
-    flex-direction: column;
-    width: calc(50% - 3rem);
-    background-color: var(--tabContent-bg-primary);
+    flex-direction: row;
+}
 
+.sectionPage {
+    display: flex;
+    flex-direction: column;
+    width: calc(55% - 3rem);
+    background-color: var(--tabContent-bg-primary);
 }
 
 .header {
