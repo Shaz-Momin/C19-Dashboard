@@ -4,7 +4,7 @@ function setDate() {
     var d = Date(Date.now());
     a = d.toString();
 
-    console.log(a);
+    //console.log(a);
 
     var date = new Date();
 

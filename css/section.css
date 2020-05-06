@@ -17,6 +17,7 @@
 section {
     margin-left: 7rem;
     height: 100vh;
+    transition: display 200ms ease;
 }
 
 .tabContent {
