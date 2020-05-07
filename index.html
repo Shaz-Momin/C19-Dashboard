@@ -95,7 +95,7 @@
             <span class="link-text">Home</span>
          </li>
 
-         <li class="nav-item" onclick="openPage('stats', this)"  id="defaultOpen">
+         <li class="nav-item" onclick="openPage('stats', this)"  id="defaultNavOpen">
             <svg
 xmlns:dc="http://purl.org/dc/elements/1.1/"
 xmlns:cc="http://creativecommons.org/ns#"
@@ -325,28 +325,28 @@ aria-hidden="true">
             <div class="header">
                <div class="tag">Covid19 Api</div>
                <div class="date">Monday, April 27 2020</div>
-               <div class="sub-head">Latest updated Statistics</div>
+               <div class="sub-head">Latest Data/Statistics - <i>Updates every 5 sec </i></div>
             </div>
    
             <div class="contentPanels">
-               <div id="active" class="GDR panel">
+               <div id="defaultPanelOpen" class="GDR panel" onclick="openPanel('GDR',this)">
                   <div class="panelTitle">Global Data Reports</div>
                   <div class="panelSubtitle">Worldwide Combined Data of cases, deaths, recoveries </div>
                </div>        
       
-               <div id="" class="USbyStates panel">
+               <div id="" class="USbyStates panel" onclick="openPanel('USbyStates',this)">
                   <div class="panelTitle">United States by States</div>
                   <div class="panelSubtitle">Total number of positive & negative test results</div>
                </div>
       
-               <div id="" class="Countries panel">
+               <div id="" class="Countries panel" onclick="openPanel('Countries',this)">
                   <div class="panelTitle">Reports By Countries</div>
                   <div class="panelSubtitle">Total deaths, cases, & recoveries</div>
                </div>
             </div>
          </div>
 
-         <div id="GDR panel" class="panelContent">
+         <div id="GDR" class="panelContent">
             <div class="contentHeader">Global</div>
             <div class="single container">
                <div class="figure g-total-cases" id="head1">#,###,###</div>
@@ -375,6 +375,16 @@ aria-hidden="true">
                <div class="figSubtitle">Active Cases</div>
             </div>          
          </div>
+
+         <div id="USbyStates" class="panelContent">
+            <div class="contentHeader">United States</div>
+
+         </div>
+
+         <div id="Countries" class="panelContent">
+            <div class="contentHeader">Country</div>
+                    
+         </div>
          
       </section>
 
@@ -400,6 +410,7 @@ aria-hidden="true">
    <script type="text/javascript" src="scripts/index.js"></script>
    <script type="text/javascript" src="scripts/date.js"></script>
    <script type="text/javascript" src="scripts/nav.js"></script>
+   <script type="text/javascript" src="scripts/panel.js"></script>
 
 </body> 
 </html>

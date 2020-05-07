@@ -1,6 +1,6 @@
 function openPage(pageName, elmnt) {
     // Hide all elements with class="tabcontent" by default
-    var i, tabcontent, tablinks;
+    var i, tabcontent;
     tabcontent = document.getElementsByClassName("tabContent");
     for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
@@ -21,4 +21,4 @@ function openPage(pageName, elmnt) {
 }
 
 // Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click(); 
+document.getElementById("defaultNavOpen").click(); 

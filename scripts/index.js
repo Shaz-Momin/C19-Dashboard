@@ -9,7 +9,7 @@ function updateData() {
     $.getJSON(url,(dat) => {
         fetch(dat);
     
-        console.log(getWW());
+        //console.log(getWW());
         setGlobalContent();
     
         function setGlobalContent() {
