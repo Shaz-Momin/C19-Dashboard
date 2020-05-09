@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;900&display=swap');
+
+:root {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#US-states {
+    background-color: var(--text-alternate);
+    border: none;
+    width: 50%;
+}
+
+.state-select {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+#USbyStates {
+    padding-bottom: 2rem;
+}
+
+
+
