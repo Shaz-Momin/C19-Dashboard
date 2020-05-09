@@ -2,7 +2,8 @@
 
 
 :root {
-  font-size: 16px;
+  --base-font-size: 16px;
+  font-size: var(--base-font-size);
   font-family: 'Open Sans', sans-serif;
   --text-primary: #8AB898;
   --text-secondary: #FAFAFA;
@@ -93,3 +94,32 @@ svg:hover + .link-text {
   margin-bottom: auto;
 }
 
+@media all and (max-width: 1250px) {
+  :root {
+    --base-font-size: 14px;
+  }
+}
+
+@media all and (max-width: 1020px) {
+  :root {
+    --base-font-size: 12px;
+  }
+}
+
+@media all and (max-width: 850px) {
+  :root {
+    --base-font-size: 10px;
+  }
+}
+
+@media all and (max-width: 680px) {
+  :root {
+    --base-font-size: 8px;
+  }
+}
+
+@media all and (max-width: 530px) {
+  :root {
+    --base-font-size: 7px;
+  }
+}
