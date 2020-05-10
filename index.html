@@ -15,6 +15,7 @@
    <link rel="stylesheet" type="text/css" href="css/section.css" media="screen"/>
    <link rel="stylesheet" type="text/css" href="css/GDR-content.css" media="screen"/>
    <link rel="stylesheet" type="text/css" href="css/states-content.css" media="screen"/>
+   <link rel="stylesheet" type="text/css" href="css/countries-content.css" media="screen"/>
 
    <title>C19 Dashboard</title>
 </head>
@@ -413,7 +414,33 @@ aria-hidden="true">
 
          <div id="Countries" class="panelContent">
             <div class="contentHeader">Country</div>
-                    
+            <div class="country-select">
+               <select name="countries" id="countries">
+                  <option value="0">select country</option>
+               </select>
+            </div>
+            <div class="single container">
+               <div class="figure c-total-cases" id="head1">###,###</div>
+               <div class="figSubtitle">Total Cases</div>
+            </div>
+            <div class="double">
+               <div class="inner-container">
+                  <div class="figure c-total-deaths" id="head4">##,###</div>
+                  <div class="figSubtitle">Total Deaths</div>
+               </div>
+               <div class="inner-container">
+                  <div class="figure c-total-recovered" id="head4">##,###</div>
+                  <div class="figSubtitle">Total Recovered</div>
+               </div>
+            </div>
+            <div class="single container">
+               <div class="figure c-total-tests" id="head3">##,###</div>
+               <div class="figSubtitle">Total Tests</div>
+            </div>
+            <div class="single container">
+               <div class="figure c-active-cases" id="head3">##,###</div>
+               <div class="figSubtitle">Active Cases</div>
+            </div>    
          </div>
          
       </section>
@@ -442,6 +469,7 @@ aria-hidden="true">
    <script type="text/javascript" src="scripts/nav.js"></script>
    <script type="text/javascript" src="scripts/panel.js"></script>
    <script type="text/javascript" src="scripts/states.js"></script>
+   <script type="text/javascript" src="scripts/countries.js"></script>
 
 
 </body> 

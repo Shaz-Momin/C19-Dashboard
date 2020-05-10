@@ -13,6 +13,7 @@ function updateData() {
     
         //console.log(getWW());
         setGlobalContent();
+
     
         function setGlobalContent() {
             $(".g-total-cases").html(getWW().TotalCases); 
@@ -23,6 +24,38 @@ function updateData() {
             $(".g-active-cases").html(getWW().ActiveCases); 
         }
 
+        $("#countries").change(function() {
+            setCountryContent($("#countries").val());
+        })
+
+        function setCountryContent(val) {
+            for (var i = 0; i < tableWW[0].length; i++) {
+                if (tableWW[0][i].Country == val) {
+                    $(".c-total-cases").html(tableWW[0][i].TotalCases); 
+                    $(".c-total-deaths").html(tableWW[0][i].TotalDeaths); 
+                    $(".c-total-recovered").html(tableWW[0][i].TotalRecovered); 
+                    $(".c-active-cases").html(tableWW[0][i].ActiveCases);
+                    $(".c-total-tests").html(tableWW[0][i].TotalTests);
+                    
+                    if ($(".c-total-cases").text().length == 0) {
+                        $(".c-total-cases").html("No Data");
+                    }
+                    if ($(".c-total-deaths").text().length == 0) {
+                        $(".c-total-deaths").html("No Data");
+                    }
+                    if ($(".c-total-recovered").text().length == 0) {
+                        $(".c-total-recovered").html("No Data");
+                    }
+                    if ($(".c-active-cases").text().length == 0) {
+                        $(".c-active-cases").html("No Data");
+                    }
+                    if ($(".c-total-tests").text().length == 0) {
+                        $(".c-total-tests").html("No Data");
+                    }
+                }
+            }
+        }
+
         
         function fetch(data){
             total = data.reports[0];
@@ -30,7 +63,7 @@ function updateData() {
         }
     
         function getWW() {
-            return ("WorldWide: ", tableWW[0][0]);
+            return (tableWW[0][0]);
         }
     });
 
