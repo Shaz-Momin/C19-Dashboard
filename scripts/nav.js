@@ -24,8 +24,10 @@ function openPage(pageName, elmnt) {
     switch (pageName) {
         case "stats":
             document.getElementById("default-Stats-PanelOpen").click(); 
+            break;
         case "twitter-timelines":
-            document.getElementById("default-TwTl-PanelOpen").click(); 
+            document.getElementById("default-TwTl-PanelOpen").click();
+            break; 
 
     }
 }
