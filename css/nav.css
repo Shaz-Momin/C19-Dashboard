@@ -111,20 +111,11 @@ svg:hover + .link-text {
     --base-font-size: 10px;
   }
 
-  #USbyStates, #GDR, #Countries {
-    padding-top: 15rem;
-    padding-bottom: 15rem;
-  }
 }
 
 @media all and (max-width: 680px) {
   :root {
     --base-font-size: 8px;
-  }
-
-  #USbyStates, #GDR, #Countries {
-    padding-top: 20rem;
-    padding-bottom: 20rem;
   }
 }
 
