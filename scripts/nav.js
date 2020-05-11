@@ -18,6 +18,16 @@ function openPage(pageName, elmnt) {
     // Make the nav tab active
     elmnt.firstElementChild.style.backgroundColor = "var(--bg-secondary)";
     elmnt.firstElementChild.style.color = "var(--text-secondary)";
+
+    // Get the element with id="defaultOpen" and click on it
+
+    switch (pageName) {
+        case "stats":
+            document.getElementById("default-Stats-PanelOpen").click(); 
+        case "twitter-timelines":
+            document.getElementById("default-TwTl-PanelOpen").click(); 
+
+    }
 }
 
 // Get the element with id="defaultOpen" and click on it

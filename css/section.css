@@ -109,3 +109,8 @@ section {
 .panel:hover {
     background-color: rgba(var(--panel-active), 0.4);
 }
+
+.twtl {
+    overflow-y: scroll;
+    width: 100%;
+}

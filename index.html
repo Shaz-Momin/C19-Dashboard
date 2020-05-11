@@ -334,7 +334,7 @@ aria-hidden="true">
             </div>
    
             <div class="contentPanels">
-               <div id="defaultPanelOpen" class="GDR panel" onclick="openPanel('GDR',this)">
+               <div id="default-Stats-PanelOpen" class="GDR panel" onclick="openPanel('GDR',this)">
                   <div class="panelTitle">Global Data Reports</div>
                   <div class="panelSubtitle">Worldwide Combined Data of cases, deaths, recoveries </div>
                </div>        
@@ -451,7 +451,67 @@ aria-hidden="true">
       </section>
 
       <section id="twitter-timelines" class="tabContent">
-         <h1>This is the Twitter-Timeline Tab!</h1>
+         <div class="sectionPage">
+            <div class="header">
+               <div class="tag">Covid19 Api</div>
+               <div class="date">Monday, April 27 2020</div>
+               <div class="sub-head">Latest Tweets from Reputable Organizations - <i>Updates automatcally</i></div>
+            </div>
+   
+            <div class="contentPanels">
+               <div id="default-TwTl-PanelOpen" class="CDC panel defaultPanelOpen" onclick="openPanel('CDC',this)">
+                  <div class="panelTitle">Centers for Disease Control @CDCgov</div>
+                  <div class="panelSubtitle">CDC's official Twitter source for daily credible health & safety updates from Centers for Disease Control & Prevention.</div>
+               </div>        
+      
+               <div id="" class="WHO panel" onclick="openPanel('WHO',this)">
+                  <div class="panelTitle">World Health Organization @WHO</div>
+                  <div class="panelSubtitle">We are the #UnitedNations’ health agency. We are committed to achieving better health for everyone, everywhere - #HealthForAll</div>
+               </div>
+
+               <div id="" class="DHSC panel" onclick="openPanel('DHSC',this)">
+                  <div class="panelTitle">Dep. of Health & Social Care @DHSCgovuk</div>
+                  <div class="panelSubtitle">We support ministers in leading the nation’s health and social care to help people live more independent, healthier lives for longer</div>
+               </div>
+
+               <div id="" class="CNNI panel" onclick="openPanel('CNNI',this)">
+                  <div class="panelTitle">CNN International @cnni</div>
+                  <div class="panelSubtitle">Breaking news from around the world, plus business, style, travel, sport and entertainment. We #gothere</div>
+               </div>
+               
+               <div id="" class="MRC panel" onclick="openPanel('MRC',this)">
+                  <div class="panelTitle">MRC Centre for G.I.D.A. @MRC_Outbreak</div>
+                  <div class="panelSubtitle">@WHO Collaborating Centre for infectious disease modelling. Follow us for regular reporting on COVID-19, other research & opportunities</div>
+               </div>
+               <br>
+            </div>
+         </div>
+
+         <div id="CDC" class="panelContent">
+            <div class="twtl">
+               <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/CDCgov?ref_src=twsrc%5Etfw">Tweets by CDCgov</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+         </div>
+         <div id="WHO" class="panelContent">
+            <div class="twtl">
+               <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/WHO?ref_src=twsrc%5Etfw">Tweets by WHO</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+            </div>
+         </div>
+         <div id="CNNI" class="panelContent">
+            <div class="twtl">
+               <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/cnni?ref_src=twsrc%5Etfw">Tweets by cnni</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+            </div>
+         </div>
+         <div id="DHSC" class="panelContent">
+            <div class="twtl">
+               <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/DHSCgovuk?ref_src=twsrc%5Etfw">Tweets by DHSCgovuk</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+            </div>
+         </div>
+         <div id="MRC" class="panelContent">
+            <div class="twtl">
+               <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/MRC_Outbreak?ref_src=twsrc%5Etfw">Tweets by MRC_Outbreak</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+            </div>
+         </div>
       </section>
 
       <section id="source" class="tabContent">
@@ -470,6 +530,7 @@ aria-hidden="true">
    <script type="text/javascript" src="scripts/panel.js"></script>
    <script type="text/javascript" src="scripts/states.js"></script>
    <script type="text/javascript" src="scripts/countries.js"></script>
+   <script type="text/javascript" src="scripts/deviceCompatibility.js"></script>
 
 
 </body> 
