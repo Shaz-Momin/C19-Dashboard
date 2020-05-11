@@ -114,3 +114,14 @@ section {
     overflow-y: scroll;
     width: 100%;
 }
+
+@media all and (max-width: 530px) {
+    section {
+        margin-left: 0rem;
+        height: calc(100vh - 8rem);
+    }
+
+    .sectionPage {
+        width: 55%;
+    }
+}

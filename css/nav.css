@@ -123,4 +123,35 @@ svg:hover + .link-text {
   :root {
     --base-font-size: 7px;
   }
+
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 8rem;
+  }
+
+  .nav-item:first-child {
+    display: none;
+  }
+  .nav-item:last-child {
+    margin-bottom: 1.9rem;
+  }
+
+  #HOME {
+    padding-left: 2rem;
+  }
+
+  svg {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
 }
