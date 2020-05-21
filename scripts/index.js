@@ -1,4 +1,3 @@
-console.log("Hello coder");
 var total = "";
 var tableWW = "";
 var tableStates = "";
@@ -8,6 +7,7 @@ var urlStates = "https://covid19-server.chrismichael.now.sh/api/v1/UnitedStateCa
 updateData();
 
 function updateData() {
+    
     $.getJSON(urlWW,(dat) => {
         fetch(dat);
     

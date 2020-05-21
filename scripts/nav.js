@@ -28,9 +28,13 @@ function openPage(pageName, elmnt) {
         case "twitter-timelines":
             document.getElementById("default-TwTl-PanelOpen").click();
             break; 
+        case "articles":
+            document.getElementById("default-Articles-PanelOpen").click();
+            break; 
 
     }
 }
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultNavOpen").click(); 
+document.getElementById("default-Stats-PanelOpen").click(); 
