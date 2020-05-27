@@ -9,10 +9,14 @@
   "author": "Shaz Momin",
   "license": "MIT",
   "dependencies": {
+    "browserify": "^16.5.1",
     "coronavirus-tracker": "^1.0.25",
+    "express": "^4.17.1",
     "gitignore": "^0.6.0",
     "live-server": "^1.2.1",
-    "united-states": "^2.0.0",
-    "select2": "~4.0"
+    "newsapi": "^2.4.0",
+    "request": "^2.88.2",
+    "select2": "~4.0",
+    "united-states": "^2.0.0"
   }
 }

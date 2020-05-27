@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;900&display=swap');
+
+
+:root {
+  font-family: 'Open Sans', sans-serif;
+  --text-primary: #8AB898;
+  --text-secondary: #FAFAFA;
+  --bg-primary: #192229;
+}
+
+.panel:last-child {
+    margin-bottom: 2rem;
+}
+
+.articles {
+    padding: 0.5rem;
+    overflow-y: scroll;
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 0.5rem;
+}
+
+.gridContainer {
+    display: grid;
+    background-color: var(--panel-subTitle);
+    grid-template-columns: auto auto;
+    cursor: context-menu;
+    margin-bottom: 0.5rem;
+    height: 12rem;
+}
+
+.imgInc {
+    grid-column-end: span 2;
+}
+
+.datePublished {
+    font-weight: 200;
+    font-size: 0.8rem;
+    letter-spacing: normal;
+    color:  var(--tabContent-bg-primary);
+}
+
+
+img {
+    width: 10rem;
+    height: 12rem;
+    object-fit: cover;
+
+}
+
+a {
+    padding: 0;
+    margin: 0;
+    color: var(--bg-primary);
+}
+
+a:link{
+    text-decoration: none!important;
+    cursor: pointer;
+    
+}
+
+
+.headline {
+    text-decoration: none;
+    letter-spacing: normal;
+    color: white;
+    padding-bottom: 0.4rem;
+    color: var(--bg-primary);
+}
+
+.des {
+    text-decoration: none;
+    font-weight: 200;
+    font-size: 0.8rem;
+    letter-spacing: normal;
+    height: 3rem;
+    line-height: 1rem;
+    overflow: hidden;
+    
+}
+
+.gridContent {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.last {
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    margin-top: auto;
+    margin-bottom: 0.4rem;
+    text-align: right;
+    padding-right: 0.5rem;
+}
+
+.demoArticle {
+    display: none;
+}
+
+.scrollGradient {
+    background: 
+      linear-gradient(#3c4951 30%, rgba(60,73,81, 0)),
+      linear-gradient(rgba(60,73,81, 0), #3c4951 70%) 0 100%,
+      radial-gradient(farthest-side at 50% 0, rgba(34,34,34, 0.5), rgba(0,0,0,0)),
+      radial-gradient(farthest-side at 50% 100%, rgba(34,34,34, 0.5), rgba(0,0,0,0)) 0 100%;
+    background-color: #3c4951;
+    background-repeat: no-repeat;
+    background-attachment: local, local, scroll, scroll;
+    background-size: 100% 60px, 100% 60px, 100% 30px, 100% 30px;
+}
+
+@media (max-width: 650px) {
+    .articles {
+        display: block;
+    }
+
+    .gridContainer {
+        height: 10rem;
+    }
+
+    img {
+        height: 10rem;
+    }
+
+}

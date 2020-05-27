@@ -3,7 +3,7 @@
   
 <head>
    <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
    <script src="https://kit.fontawesome.com/1fdc4de309.js" crossorigin="anonymous"></script>
@@ -16,6 +16,7 @@
    <link rel="stylesheet" type="text/css" href="css/GDR-content.css" media="screen"/>
    <link rel="stylesheet" type="text/css" href="css/states-content.css" media="screen"/>
    <link rel="stylesheet" type="text/css" href="css/countries-content.css" media="screen"/>
+   <link rel="stylesheet" type="text/css" href="css/news.css" media="screen"/>
 
    <title>C19 Dashboard</title>
 </head>
@@ -141,39 +142,39 @@ aria-hidden="true">
 
          <li class="nav-item" onclick="openPage('articles', this)">
             <svg
-xmlns:dc="http://purl.org/dc/elements/1.1/"
-xmlns:cc="http://creativecommons.org/ns#"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-xmlns:svg="http://www.w3.org/2000/svg"
-xmlns="http://www.w3.org/2000/svg"
-height="384"
-width="576"
-id="svg4"
-version="1.1"
-viewBox="0 0 576 384"
-role="img"
-class="svg-inline--fa fa-newspaper fa-w-18"
-data-icon="newspaper"
-data-prefix="far"
-focusable="false"
-aria-hidden="true">
-<metadata
-   id="metadata10">
-   <rdf:RDF>
-   <cc:Work
-      rdf:about="">
-      <dc:format>image/svg+xml</dc:format>
-      <dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-   </cc:Work>
-   </rdf:RDF>
-</metadata>
-<defs
-   id="defs8" />
-<path
-   style="fill:currentColor"
-   id="path2"
-   d="M 552,0 H 112 C 91.142,0 73.357,13.377 66.752,32 H 24 C 10.745,32 0,42.745 0,56 v 272 c 0,30.928 25.072,56 56,56 h 496 c 13.255,0 24,-10.745 24,-24 V 24 C 576,10.745 565.255,0 552,0 Z M 48,328 V 80 h 16 v 248 c 0,4.411 -3.589,8 -8,8 -4.411,0 -8,-3.589 -8,-8 z m 480,8 H 111.422 c 0.374,-2.614 0.578,-5.283 0.578,-8 V 48 H 528 Z M 172,216 h 136 c 6.627,0 12,-5.373 12,-12 v -96 c 0,-6.627 -5.373,-12 -12,-12 H 172 c -6.627,0 -12,5.373 -12,12 v 96 c 0,6.627 5.373,12 12,12 z m 28,-80 h 80 v 40 h -80 z m -40,140 v -24 c 0,-6.627 5.373,-12 12,-12 h 136 c 6.627,0 12,5.373 12,12 v 24 c 0,6.627 -5.373,12 -12,12 H 172 c -6.627,0 -12,-5.373 -12,-12 z m 192,0 v -24 c 0,-6.627 5.373,-12 12,-12 h 104 c 6.627,0 12,5.373 12,12 v 24 c 0,6.627 -5.373,12 -12,12 H 364 c -6.627,0 -12,-5.373 -12,-12 z m 0,-144 v -24 c 0,-6.627 5.373,-12 12,-12 h 104 c 6.627,0 12,5.373 12,12 v 24 c 0,6.627 -5.373,12 -12,12 H 364 c -6.627,0 -12,-5.373 -12,-12 z m 0,72 v -24 c 0,-6.627 5.373,-12 12,-12 h 104 c 6.627,0 12,5.373 12,12 v 24 c 0,6.627 -5.373,12 -12,12 H 364 c -6.627,0 -12,-5.373 -12,-12 z" />
+               xmlns:dc="http://purl.org/dc/elements/1.1/"
+               xmlns:cc="http://creativecommons.org/ns#"
+               xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+               xmlns:svg="http://www.w3.org/2000/svg"
+               xmlns="http://www.w3.org/2000/svg"
+               height="384"
+               width="576"
+               id="svg4"
+               version="1.1"
+               viewBox="0 0 576 384"
+               role="img"
+               class="svg-inline--fa fa-newspaper fa-w-18"
+               data-icon="newspaper"
+               data-prefix="far"
+               focusable="false"
+               aria-hidden="true">
+               <metadata
+                  id="metadata10">
+                  <rdf:RDF>
+                  <cc:Work
+                     rdf:about="">
+                     <dc:format>image/svg+xml</dc:format>
+                     <dc:type
+                        rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                  </cc:Work>
+                  </rdf:RDF>
+               </metadata>
+               <defs
+                  id="defs8" />
+               <path
+                  style="fill:currentColor"
+                  id="path2"
+                  d="M 552,0 H 112 C 91.142,0 73.357,13.377 66.752,32 H 24 C 10.745,32 0,42.745 0,56 v 272 c 0,30.928 25.072,56 56,56 h 496 c 13.255,0 24,-10.745 24,-24 V 24 C 576,10.745 565.255,0 552,0 Z M 48,328 V 80 h 16 v 248 c 0,4.411 -3.589,8 -8,8 -4.411,0 -8,-3.589 -8,-8 z m 480,8 H 111.422 c 0.374,-2.614 0.578,-5.283 0.578,-8 V 48 H 528 Z M 172,216 h 136 c 6.627,0 12,-5.373 12,-12 v -96 c 0,-6.627 -5.373,-12 -12,-12 H 172 c -6.627,0 -12,5.373 -12,12 v 96 c 0,6.627 5.373,12 12,12 z m 28,-80 h 80 v 40 h -80 z m -40,140 v -24 c 0,-6.627 5.373,-12 12,-12 h 136 c 6.627,0 12,5.373 12,12 v 24 c 0,6.627 -5.373,12 -12,12 H 172 c -6.627,0 -12,-5.373 -12,-12 z m 192,0 v -24 c 0,-6.627 5.373,-12 12,-12 h 104 c 6.627,0 12,5.373 12,12 v 24 c 0,6.627 -5.373,12 -12,12 H 364 c -6.627,0 -12,-5.373 -12,-12 z m 0,-144 v -24 c 0,-6.627 5.373,-12 12,-12 h 104 c 6.627,0 12,5.373 12,12 v 24 c 0,6.627 -5.373,12 -12,12 H 364 c -6.627,0 -12,-5.373 -12,-12 z m 0,72 v -24 c 0,-6.627 5.373,-12 12,-12 h 104 c 6.627,0 12,5.373 12,12 v 24 c 0,6.627 -5.373,12 -12,12 H 364 c -6.627,0 -12,-5.373 -12,-12 z" />
             </svg>
             <span class="link-text">Articles</span>
          </li>
@@ -258,39 +259,39 @@ aria-hidden="true">
 
          <li class="nav-item">
             <svg
-xmlns:dc="http://purl.org/dc/elements/1.1/"
-xmlns:cc="http://creativecommons.org/ns#"
-xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-xmlns:svg="http://www.w3.org/2000/svg"
-xmlns="http://www.w3.org/2000/svg"
-height="496"
-width="496"
-id="svg4"
-version="1.1"
-viewBox="0 0 496 496"
-role="img"
-class="svg-inline--fa fa-adjust fa-w-16"
-data-icon="adjust"
-data-prefix="fas"
-focusable="false"
-aria-hidden="true">
-<metadata
-   id="metadata10">
-   <rdf:RDF>
-   <cc:Work
-      rdf:about="">
-      <dc:format>image/svg+xml</dc:format>
-      <dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-   </cc:Work>
-   </rdf:RDF>
-</metadata>
-<defs
-   id="defs8" />
-<path
-   style="fill:currentColor"
-   id="path2"
-   d="M 0,248 C 0,384.966 111.033,496 248,496 384.967,496 496,384.966 496,248 496,111.034 384.966,0 248,0 111.034,0 0,111.033 0,248 Z M 248,432 V 64 c 101.705,0 184,82.311 184,184 0,101.705 -82.311,184 -184,184 z" />
+                  xmlns:dc="http://purl.org/dc/elements/1.1/"
+                  xmlns:cc="http://creativecommons.org/ns#"
+                  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+                  xmlns:svg="http://www.w3.org/2000/svg"
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="496"
+                  width="496"
+                  id="svg4"
+                  version="1.1"
+                  viewBox="0 0 496 496"
+                  role="img"
+                  class="svg-inline--fa fa-adjust fa-w-16"
+                  data-icon="adjust"
+                  data-prefix="fas"
+                  focusable="false"
+                  aria-hidden="true">
+                  <metadata
+                     id="metadata10">
+                     <rdf:RDF>
+                     <cc:Work
+                        rdf:about="">
+                        <dc:format>image/svg+xml</dc:format>
+                        <dc:type
+                           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+                     </cc:Work>
+                     </rdf:RDF>
+                  </metadata>
+                  <defs
+                     id="defs8" />
+                  <path
+                     style="fill:currentColor"
+                     id="path2"
+                     d="M 0,248 C 0,384.966 111.033,496 248,496 384.967,496 496,384.966 496,248 496,111.034 384.966,0 248,0 111.034,0 0,111.033 0,248 Z M 248,432 V 64 c 101.705,0 184,82.311 184,184 0,101.705 -82.311,184 -184,184 z" />
             </svg>
             <span class="link-text">Switch</span>
          </li>
@@ -451,67 +452,47 @@ aria-hidden="true">
             <div class="header">
                <div class="tag">Covid19 Api</div>
                <div class="date">Monday, April 27 2020</div>
-               <div class="sub-head">Latest News Articles - <i>Updates every 24 hrs </i></div>
+               <div class="sub-head">Top New York Times Articles - <i>Updates every 5 mins </i></div>
             </div>
    
             <div class="contentPanels">
-               <div id="default-Articles-PanelOpen" class="CNN panel" onclick="openPanel('CNN',this)">
-                  <div class="panelTitle">CNN</div>
-                  <div class="panelSubtitle">Lorem ipsum dolor sit amet consectetur.</div>
+               <div id="default-Articles-PanelOpen" class="LATEST-TOP panel" onclick="openPanel('LATEST-TOP',this)">
+                  <div class="panelTitle">Top Latest Articles about Coronavirus</div>
+                  <div class="panelSubtitle">Get the top latest NYT articles about Coronavirus</div>
                </div>
       
-               <div id="" class="CBS-NEWS panel" onclick="openPanel('CBS-NEWS',this)">
-                  <div class="panelTitle">CBS</div>
-                  <div class="panelSubtitle">Lorem ipsum dolor sit amet consectetur.</div>
-               </div>
-      
-               <div id="" class="CNBC panel" onclick="openPanel('CNBC',this)">
-                  <div class="panelTitle">CNBC</div>
-                  <div class="panelSubtitle">Lorem ipsum dolor sit amet consectetur.</div>
-               </div>
-
-               <div id="" class="BUSINESS-INSIDER panel" onclick="openPanel('BUSINESS-INSIDER',this)">
-                  <div class="panelTitle">BUSINESS INSIDER</div>
-                  <div class="panelSubtitle">Lorem ipsum dolor sit amet consectetur.</div>
-               </div>
-
-               <div id="" class="BBC-NEWS panel" onclick="openPanel('BBC-NEWS',this)">
-                  <div class="panelTitle">BBC</div>
-                  <div class="panelSubtitle">Lorem ipsum dolor sit amet consectetur.</div>
+               <div id="" class="MOST-VIEWED panel" onclick="openPanel('MOST-VIEWED',this)">
+                  <div class="panelTitle">Most Viewed COVID-19 Articles</div>
+                  <div class="panelSubtitle">Get the most viewed NYT articles about COVID-19</div>
                </div>
             </div>
          </div>
 
-         <div id="CNN" class="panelContent">
-            <div class="contentHeader">CNN News</div>
-            
-            </div>          
+         <div id="LATEST-TOP" class="panelContent">
+            <div class="contentHeader">LATEST TOP</div>
+            <div class="Hidden">
+               <div class="gridContainer imgInc demoArticle">
+                  <div class="gridImg">
+                     <img src="https://ichef.bbci.co.uk/news/1024/branded_news/10053/production/_112391656_jerman.jpg">
+                  </div>
+                  <div class="gridContent">
+                     <div class="headline"><a href="https://www.bbc.com/news/world-us-canada-52748424" target="_blank">Former White House butler, 91, dies of coronavirus</a></div>
+                     <div class="des">A former White House butler, one who worked for 11 presidents in a career that spanned five decades, has died of coronavirus. He was 91. It was Jackie Kennedy who noticed Wilson Roosevelt Jerman while he was working as a cleaner in the White House.</div>
+                     <div class="datePublished last">May 21 | 7:06 PM</div>
+                  </div>  
+               </div>
+            </div>
+            <div id="latest-top" class="articles scrollGradient">                              
+                
+            </div> 
          </div>
 
-         <div id="CBS-NEWS" class="panelContent">
-            <div class="contentHeader">CBS News</div>
-            
-            </div>          
-         </div>
+         <div id="MOST-VIEWED" class="panelContent">
+            <div class="contentHeader">MOST VIEWED</div>
+            <div id="most-viewed" class="articles">
 
-         <div id="CNBC" class="panelContent">
-            <div class="contentHeader">CNBC News</div>
-            
-            </div>          
+            </div>                          
          </div>
-
-         <div id="BUSINESS-INSIDER" class="panelContent">
-            <div class="contentHeader">BUSINESS-INSIDER News</div>
-            
-            </div>          
-         </div>
-
-         <div id="BBC-NEWS" class="panelContent">
-            <div class="contentHeader">BBC News</div>
-            
-            </div>          
-         </div>
-
       </section>
 
       <section id="twitter-timelines" class="tabContent">
