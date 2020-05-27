@@ -16,7 +16,7 @@ updateTopLatest();
 // Refreshes every 30 seconds
 setInterval(() => {
     updateTopLatest();
-}, 30000);
+}, 120000);
 
 
 function updateTopLatest() {
@@ -42,7 +42,7 @@ function updateTopLatest() {
                     newElm.setAttribute("class", "gridContainer imgInc");
                 } else {
                     newElm.getElementsByTagName("img")[0].style.display = "none";
-                    newElm.style.setProperty("grid-column-end", "span 1");
+                    newElm.style.height = "10rem"
                 }
 
                 newElm.getElementsByTagName("a")[0].innerHTML = LatestArr[i].headline.main;
