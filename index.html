@@ -461,9 +461,19 @@ aria-hidden="true">
                   <div class="panelSubtitle">Get the top latest NYT articles about Coronavirus</div>
                </div>
       
-               <div id="" class="MOST-VIEWED panel" onclick="openPanel('MOST-VIEWED',this)">
-                  <div class="panelTitle">Most Viewed COVID-19 Articles</div>
-                  <div class="panelSubtitle">Get the most viewed NYT articles about COVID-19</div>
+               <div id="" class="TS-SCIENCE panel" onclick="openPanel('TS-SCIENCE',this)">
+                  <div class="panelTitle">Science - Top Stories & Headlines</div>
+                  <div class="panelSubtitle">Top NYT Science stories & articles</div>
+               </div>
+
+               <div id="" class="TS-US panel" onclick="openPanel('TS-US',this)">
+                  <div class="panelTitle">U.S. - Top Stories & Headlines</div>
+                  <div class="panelSubtitle">Top NYT United States stories & articles</div>
+               </div>
+
+               <div id="" class="TS-WORLD panel" onclick="openPanel('TS-WORLD',this)">
+                  <div class="panelTitle">World - Top Stories & Headlines</div>
+                  <div class="panelSubtitle">Top NYT World stories & articles</div>
                </div>
             </div>
          </div>
@@ -472,9 +482,7 @@ aria-hidden="true">
             <div class="contentHeader">LATEST TOP</div>
             <div class="Hidden">
                <div class="gridContainer imgInc demoArticle">
-                  <div class="gridImg">
-                     <img src="https://ichef.bbci.co.uk/news/1024/branded_news/10053/production/_112391656_jerman.jpg">
-                  </div>
+                  <img src="https://ichef.bbci.co.uk/news/1024/branded_news/10053/production/_112391656_jerman.jpg">
                   <div class="gridContent">
                      <div class="headline"><a href="https://www.bbc.com/news/world-us-canada-52748424" target="_blank">Former White House butler, 91, dies of coronavirus</a></div>
                      <div class="des">A former White House butler, one who worked for 11 presidents in a career that spanned five decades, has died of coronavirus. He was 91. It was Jackie Kennedy who noticed Wilson Roosevelt Jerman while he was working as a cleaner in the White House.</div>
@@ -491,12 +499,36 @@ aria-hidden="true">
             
          </div>
 
-         <div id="MOST-VIEWED" class="panelContent">
-            <div class="contentHeader">MOST VIEWED</div>
-            <div id="most-viewed" class="articles">
-
-            </div>                          
+         <div id="TS-SCIENCE" class="panelContent">
+            <div class="contentHeader">Science - Top Stories</div>
+            <div class="main-ts-science scrollGradient">
+               <div id="ts-science" class="articles">
+                  <!-- Automatically Pulled Latest Articles -->
+               </div>  
+               <br>
+            </div>                        
          </div>
+
+         <div id="TS-US" class="panelContent">
+            <div class="contentHeader">U.S. - Top Stories</div>
+            <div class="main-ts-us scrollGradient">
+               <div id="ts-us" class="articles">
+                  <!-- Automatically Pulled Latest Articles -->
+               </div>
+               <br>
+            </div>                     
+         </div>
+
+         <div id="TS-WORLD" class="panelContent">
+            <div class="contentHeader">World - Top Stories</div>
+            <div class="main-ts-world scrollGradient">
+               <div id="ts-world" class="articles">
+                  <!-- Automatically Pulled Latest Articles -->
+               </div>  
+               <br>
+            </div>                        
+         </div>
+         
       </section>
 
       <section id="twitter-timelines" class="tabContent">

@@ -3,6 +3,7 @@ let query = "&q=coronavirus";
 let sort = "&sort=newest";
 let apiKey = "&api-key=tsAmKyrp4kA9AAQPgzDt3K5y0zHSi7nM";
 let rootImgSrc = "https://www.nytimes.com/";
+let topStoryUrl = "https://api.nytimes.com/svc/topstories/v2/";
 var date = new Date();
 
 
@@ -11,23 +12,25 @@ $.getJSON("https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&s
     //console.log(data);
 }) 
 
-updateTopLatest();
+updateArticles();
 
 // Refreshes every 30 seconds
 setInterval(() => {
-    updateTopLatest();
+    updateArticles();
 }, 120000);
 
 
-function updateTopLatest() {
+function updateArticles() {
+
+    // Clearing old articles 
     var node= document.getElementById("latest-top");
     node.querySelectorAll('*').forEach(n => n.remove());
 
-
+    // Fetching new data and setting it
     $.getJSON(sourceUrl + query + sort + apiKey, (dat) => {
-        setArticles();
+        setArticles(dat);
 
-        function setArticles() {
+        function setArticles(dat) {
             //var LatestTop = JSON.parse(window.localStorage.getItem("Latest-Top"));
             //console.log(LatestTop);
             var LatestArr = dat.response.docs;
@@ -42,6 +45,8 @@ function updateTopLatest() {
                     newElm.setAttribute("class", "gridContainer imgInc");
                 } else {
                     newElm.getElementsByTagName("img")[0].style.display = "none";
+                    newElm.setAttribute("class", "gridContainer");
+
                     newElm.style.height = "10rem"
                 }
 
@@ -74,11 +79,83 @@ function updateTopLatest() {
             } else {
                 timeState = " A.M.";
             }
-            //console.log(month + " " + numDate + " | " + hr + ":" + min + timeState);
-            return (month + " " + numDate + " | " + hr + ":" + min + timeState);
-        }
-        
 
+            let GMT = strArr[1].substring(8);
+
+            //console.log(month + " " + numDate + " | " + hr + ":" + min + timeState);
+            return (month + " " + numDate + " | " + hr + ":" + min + timeState + " | " + "GMT " + GMT);
+        }
+    })
+
+    var story_sections = ["science","us","world"];
+
+    story_sections.forEach(sect =>  {
+
+        // Clearing old articles
+        var node= document.getElementById("ts-" + sect);
+        node.querySelectorAll('*').forEach(n => n.remove());
+
+        // Fetching latest articles and setting it
+        $.getJSON(topStoryUrl + sect + ".json?" + apiKey.substring(1), (dat) => {
+            //console.log(dat);
+            setArticles(dat);
+
+            function setArticles(dat) {
+                //var LatestTop = JSON.parse(window.localStorage.getItem("Latest-Top"));
+                //console.log(LatestTop);
+                var LatestArr = dat.results;
+                for (var i = 0; i < LatestArr.length; i++) {
+                    var elm = document.getElementsByClassName("gridContainer")[0];
+                    var newElm = elm.cloneNode(true);
+                    
+                    newElm.style.setProperty("display","grid");
+                    // Setting new attributes to article widget
+                    if (LatestArr[i].multimedia.length != 0) {
+                        newElm.getElementsByTagName("img")[0].src = LatestArr[i].multimedia[4].url;
+                        newElm.setAttribute("class", "gridContainer imgInc");
+                    } else {
+                        newElm.getElementsByTagName("img")[0].style.display = "none";
+                        newElm.setAttribute("class", "gridContainer");
+
+                        newElm.style.height = "10rem"
+                    }
+
+                    newElm.getElementsByTagName("a")[0].innerHTML = LatestArr[i].title;
+                    newElm.getElementsByTagName("a")[0].href = LatestArr[i].url;
+                    newElm.getElementsByClassName("des")[0].innerHTML = LatestArr[i].abstract;
+                    newElm.getElementsByClassName("datePublished")[0].innerHTML = formatPubAt(LatestArr[i].published_date);
+
+                    // Adding the new widget {node}
+                    document.getElementById("ts-" + sect).appendChild(newElm);
+                }
+            }
+
+            function formatPubAt(str) {
+                var strArr = str.split("T");
+                var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
+                
+                var month = months[parseInt(strArr[0].substring(5,7)) - 1];
+                var numDate = strArr[0].substring(8);
+            
+                var hr = strArr[1].substring(0,2);
+                var min = strArr[1].substring(3,5);
+            
+                var timeState = "";
+                if (parseInt(hr) > 12) {
+                    hr = hr - 12;
+                    timeState = " P.M.";
+                } else if (parseInt(hr) == 12) {
+                    timeState = " P.M.";
+                } else {
+                    timeState = " A.M.";
+                }
+
+                let GMT = strArr[1].substring(8);
+
+                //console.log(month + " " + numDate + " | " + hr + ":" + min + timeState);
+                return (month + " " + numDate + " | " + hr + ":" + min + timeState + " | " + "GMT " + GMT);
+            }
+        })
     })
 }
 
