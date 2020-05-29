@@ -61,17 +61,22 @@ function updateArticles() {
         }
 
         function formatPubAt(str) {
-            var strArr = str.split("T");
+            const date = new Date(str);
+            const localDate = new Date(date.toLocaleString());
+
             var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
             
-            var month = months[parseInt(strArr[0].substring(5,7)) - 1];
-            var numDate = strArr[0].substring(8);
-        
-            var hr = strArr[1].substring(0,2);
-            var min = strArr[1].substring(3,5);
-        
-            var timeState = "";
-            if (parseInt(hr) > 12) {
+            var month = months[localDate.getMonth() - 1];
+            var numDate = localDate.getDate();
+            
+            var timeStr = localDate.toTimeString();
+            console.log(timeStr);
+
+            var hr = parseInt(timeStr.substring(0,2));
+            var min = timeStr.substring(3,5);
+
+            timeState = "";
+            if (hr > 12) {
                 hr = hr - 12;
                 timeState = " P.M.";
             } else if (parseInt(hr) == 12) {
@@ -79,11 +84,9 @@ function updateArticles() {
             } else {
                 timeState = " A.M.";
             }
-
-            let GMT = strArr[1].substring(8);
-
+        
             //console.log(month + " " + numDate + " | " + hr + ":" + min + timeState);
-            return (month + " " + numDate + " | " + hr + ":" + min + timeState + " | " + "GMT " + GMT);
+            return (month + " " + numDate + " | " + hr + ":" + min + timeState);
         }
     })
 
@@ -131,17 +134,22 @@ function updateArticles() {
             }
 
             function formatPubAt(str) {
-                var strArr = str.split("T");
+                const date = new Date(str);
+                const localDate = new Date(date.toLocaleString());
+
                 var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
                 
-                var month = months[parseInt(strArr[0].substring(5,7)) - 1];
-                var numDate = strArr[0].substring(8);
-            
-                var hr = strArr[1].substring(0,2);
-                var min = strArr[1].substring(3,5);
-            
-                var timeState = "";
-                if (parseInt(hr) > 12) {
+                var month = months[localDate.getMonth() - 1];
+                var numDate = localDate.getDate();
+                
+                var timeStr = localDate.toTimeString();
+                console.log(timeStr);
+
+                var hr = parseInt(timeStr.substring(0,2));
+                var min = timeStr.substring(3,5);
+
+                timeState = "";
+                if (hr > 12) {
                     hr = hr - 12;
                     timeState = " P.M.";
                 } else if (parseInt(hr) == 12) {
@@ -149,11 +157,9 @@ function updateArticles() {
                 } else {
                     timeState = " A.M.";
                 }
-
-                let GMT = strArr[1].substring(8);
-
+            
                 //console.log(month + " " + numDate + " | " + hr + ":" + min + timeState);
-                return (month + " " + numDate + " | " + hr + ":" + min + timeState + " | " + "GMT " + GMT);
+                return (month + " " + numDate + " | " + hr + ":" + min + timeState);
             }
         })
     })
