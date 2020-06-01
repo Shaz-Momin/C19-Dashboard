@@ -84,7 +84,7 @@ function updateArticles() {
             } else {
                 timeState = " A.M.";
             }
-        
+            
             //console.log(month + " " + numDate + " | " + hr + ":" + min + timeState);
             return (month + " " + numDate + " | " + hr + ":" + min + timeState);
         }
@@ -143,7 +143,7 @@ function updateArticles() {
                 var numDate = localDate.getDate();
                 
                 var timeStr = localDate.toTimeString();
-                console.log(timeStr);
+                //console.log(timeStr);
 
                 var hr = parseInt(timeStr.substring(0,2));
                 var min = timeStr.substring(3,5);

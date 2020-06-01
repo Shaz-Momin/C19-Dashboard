@@ -27,6 +27,7 @@
 
 .gridContainer {
     display: grid;
+    font-family: 'Open Sans', sans-serif;
     background-color: rgba(var(--news-widget), 0.5);
     grid-template-columns: auto auto;
     cursor: context-menu;
