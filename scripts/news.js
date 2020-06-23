@@ -70,7 +70,7 @@ function updateArticles() {
             var numDate = localDate.getDate();
             
             var timeStr = localDate.toTimeString();
-            console.log(timeStr);
+            //console.log(timeStr);
 
             var hr = parseInt(timeStr.substring(0,2));
             var min = timeStr.substring(3,5);

@@ -100,18 +100,6 @@ a:link{
     display: none;
 }
 
-.scrollGradient {
-    background: 
-      linear-gradient(#3c4951 30%, rgba(60,73,81, 0)),
-      linear-gradient(rgba(60,73,81, 0), #3c4951 70%) 0 100%,
-      radial-gradient(farthest-side at 50% 0, rgba(34,34,34, 0.5), rgba(0,0,0,0)),
-      radial-gradient(farthest-side at 50% 100%, rgba(34,34,34, 0.5), rgba(0,0,0,0)) 0 100%;
-    background-color: #3c4951;
-    background-repeat: no-repeat;
-    background-attachment: local, local, scroll, scroll;
-    background-size: 100% 60px, 100% 60px, 100% 30px, 100% 30px;
-}
-
 @media (max-width: 650px) {
 
     .gridContainer {

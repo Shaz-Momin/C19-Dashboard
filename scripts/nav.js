@@ -10,7 +10,7 @@ function openPage(pageName, elmnt) {
     document.getElementById(pageName).style.display = "flex";
 
     // Resetting nav tab backgroundcolor/color values
-    for (j = 0; j < 7; j++) {
+    for (j = 0; j < 6; j++) {
         document.getElementsByTagName("svg")[j].style.backgroundColor = "var(--bg-primary)";
         document.getElementsByTagName("svg")[j].style.color = "var(--text-primary)";
     }
