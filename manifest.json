@@ -21,7 +21,8 @@
         {
             "src": "Assets/C19_192x192.png",
             "sizes": "192x192",
-            "type": "image/png"
+            "type": "image/png",
+            "purpose": "any maskable"
         },
         {
             "src": "Assets/C19_256x256.png",
