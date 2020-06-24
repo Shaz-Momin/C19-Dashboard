@@ -1,0 +1,37 @@
+{
+    "short_name": "C19 Dashboard",
+    "name": "COVID-19 Dashboard",
+    "description": "A versatile COVID-19 dashboard with latest statistics, news articles, and twitter-timeline updates",
+    "icons": [
+        {
+            "src": "Assets/C19_48x48.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        },
+        {
+            "src": "Assets/C19_96x96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        },
+        {
+            "src": "Assets/C19_144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "Assets/C19_192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "Assets/C19_256x256.png",
+            "sizes": "256x256",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "./?utm_source=web_app_manifest",
+    "display": "standalone",
+    "orientation": "landscape",
+    "theme_color": "#8AB898",
+    "background_color": "#192229"
+}
