@@ -66,7 +66,7 @@ function updateArticles() {
 
             var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
             
-            var month = months[localDate.getMonth() - 1];
+            var month = months[localDate.getMonth()];
             var numDate = localDate.getDate();
             
             var timeStr = localDate.toTimeString();
@@ -139,7 +139,7 @@ function updateArticles() {
 
                 var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"];
                 
-                var month = months[localDate.getMonth() - 1];
+                var month = months[localDate.getMonth()];
                 var numDate = localDate.getDate();
                 
                 var timeStr = localDate.toTimeString();
