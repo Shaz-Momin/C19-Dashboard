@@ -3,6 +3,6 @@
     "workbench.colorCustomizations": {
         
     },
-    "liveServer.settings.CustomBrowser": "safari",
+    "liveServer.settings.CustomBrowser": "chrome",
     "liveServer.settings.multiRootWorkspaceName": "C19-Dashboard"
 }
