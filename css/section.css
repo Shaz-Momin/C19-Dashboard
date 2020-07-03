@@ -24,6 +24,10 @@ section {
     flex-direction: row;
 }
 
+.tabContent:last-child {
+    display: block;
+}
+
 .sectionPage {
     display: flex;
     flex-direction: column;

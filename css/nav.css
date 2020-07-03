@@ -100,6 +100,7 @@ svg:hover + .link-text {
   border: solid 1px var(--text-primary);
 }
 
+
 @media all and (max-width: 1250px) {
   :root {
     --base-font-size: 14px;
