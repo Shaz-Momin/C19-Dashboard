@@ -54,10 +54,6 @@
     text-align: center;
 }
 
-.container:last-child {
-    margin-bottom: 2rem;
-}
-
 .figure {
     color: var(--text-figure);
 }

@@ -23,6 +23,7 @@
    <link rel="stylesheet" type="text/css" href="css/states-content.css" media="screen"/>
    <link rel="stylesheet" type="text/css" href="css/countries-content.css" media="screen"/>
    <link rel="stylesheet" type="text/css" href="css/news.css" media="screen"/>
+   <link rel="stylesheet" type="text/css" href="css/counties.css" media="screen"/>
 
    <title>C19 Dashboard</title>
 </head>
@@ -317,6 +318,11 @@ aria-hidden="true">
                   <div class="panelTitle">United States by States</div>
                   <div class="panelSubtitle">Total number of positive & negative test results</div>
                </div>
+
+               <div id="" class="USbyCounties panel" onclick="openPanel('USbyCounties',this)">
+                  <div class="panelTitle">United States by Counties</div>
+                  <div class="panelSubtitle">Confirmed cases, deaths, & fatality rate of each county</div>
+               </div>
       
                <div id="" class="Countries panel" onclick="openPanel('Countries',this)">
                   <div class="panelTitle">Reports By Countries</div>
@@ -383,6 +389,43 @@ aria-hidden="true">
             <div class="single container">
                <div class="figure s-data-quality-grade" id="head3">@</div>
                <div class="figSubtitle">Data Quality Grade</div>
+            </div>
+         </div>
+
+         <div id="USbyCounties" class="panelContent">
+            <div class="contentHeader">United States</div>
+            <div class="county-select">
+               <select name="counties" id="US-counties">
+                  <option value="0">select county</option>
+               </select>
+            </div>
+            <div class="single container state-name">
+               <div class="figure co-state-name" id="head3">###</div>
+               <div class="figSubtitle">State</div>
+            </div>
+            <div class="double">
+               <div class="inner container">
+                  <div class="figure co-confirmed-cases" id="head1">#,###</div>
+                  <div class="figSubtitle">Confirmed Cases</div>
+               </div>
+               <div class="inner container last-inner">
+                  <div class="figure co-deaths" id="head1">###</div>
+                  <div class="figSubtitle">Deaths</div>
+               </div>
+            </div>
+            <div class="double">
+               <div class="inner-container">
+                  <div class="figure co-new-cases" id="head4">##</div>
+                  <div class="figSubtitle">New Cases</div>
+               </div>
+               <div class="inner-container">
+                  <div class="figure co-new-deaths" id="head4">##</div>
+                  <div class="figSubtitle">New Deaths</div>
+               </div>
+            </div>
+            <div class="single container">
+               <div class="figure co-fatality-rate" id="head3">%</div>
+               <div class="figSubtitle">Fatality Rate</div>
             </div>
          </div>
 
@@ -593,6 +636,7 @@ aria-hidden="true">
    <script type="text/javascript" src="scripts/switch.js"></script>
    <script type="text/javascript" src="main.js"></script>
    <script type="text/javascript" src="scripts/report.js"></script>
+   <script type="text/javascript" src="scripts/counties.js"></script>
 
 
 </body> 

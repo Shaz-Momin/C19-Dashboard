@@ -24,6 +24,11 @@ section {
     flex-direction: row;
 }
 
+.tabContent:first-child {
+    display: flex;
+    flex-direction: column;
+}
+
 .tabContent:last-child {
     display: block;
 }

@@ -1,5 +1,4 @@
 
-
 var statesObj = {
     'AL' : 'Alabama',
     'AK' : 'Alaska',

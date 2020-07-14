@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;900&display=swap');
+
+:root {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#counties {
+    background-color: var(--text-alternate);
+    border: none;
+    width: 50%;
+}
+
+.county-select {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+#USbyCounties {
+    padding-bottom: 1rem;
+}
+
+.last-inner {
+    margin-left: 3rem;
+}
+
+.state-name {
+    margin: 1rem;
+}
+

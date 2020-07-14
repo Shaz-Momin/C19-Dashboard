@@ -4,6 +4,8 @@ var tableStates = "";
 
 var urlWW = "https://covid19-server.chrismichael.now.sh/api/v1/AllReports";
 var urlStates = "https://covid19-server.chrismichael.now.sh/api/v1/UnitedStateCasesByStates";
+var postmanCounties = "https://covid19-us-api.herokuapp.com/county"; // API URL from POSTMAN
+
 updateData();
 
 function updateData() {
@@ -56,7 +58,6 @@ function updateData() {
             }
         }
 
-        
         function fetch(data){
             total = data.reports[0];
             tableWW = data.reports[0].table;
@@ -74,7 +75,6 @@ function updateData() {
 
         $("#US-states").change(function() {
             setStateContent($("#US-states").val());
-            
         })
 
         function setStateContent(val) {
@@ -89,13 +89,32 @@ function updateData() {
             }
         }
     
-    
         function fetch(database) {
             tableStates = database.data[0].table;
         }
-    
         
     });
+
+    $.getJSON(postmanCounties, (dat) => {
+        //console.log(dat.message[0].county_name);
+
+        $("#US-counties").change(function() {
+            setCountyContent($("#US-counties").val());
+        })
+
+        function setCountyContent(val) {
+            for ( i = 0; i < dat.message.length; i++) {
+                if (dat.message[i].county_name == val) {
+                    $(".co-state-name").html((dat.message[i].state_name.toString()));
+                    $(".co-confirmed-cases").html((dat.message[i].confirmed.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")));
+                    $(".co-deaths").html((dat.message[i].death.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")));
+                    $(".co-new-cases").html((dat.message[i].new.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")));
+                    $(".co-new-deaths").html((dat.message[i].new_death.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")));
+                    $(".co-fatality-rate").html((dat.message[i].fatality_rate.toString()));
+                }
+            }
+        }
+    })
 }
 
 
