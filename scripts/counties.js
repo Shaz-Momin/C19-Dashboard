@@ -17,7 +17,6 @@ $.getJSON(postmanCounties, (data) => {
     }
 })
 
-
 $('#US-counties').select2({
     width: "15rem"
 });

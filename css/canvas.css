@@ -1,0 +1,67 @@
+:root {
+    --inner-widget: rgba(147, 156,162);
+}
+
+.Canvas {
+    padding-left: 2rem;
+    padding-right:2rem;
+    display: grid;
+    grid-template-columns: 18rem 18rem 18rem 18rem;
+    grid-column-gap: 2rem;
+}
+  
+.container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.draggable {
+    width: 90%;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    align-content: center;
+    text-align: center;
+    background-color: rgba(var(--news-widget),0.7);
+    cursor: default;
+}
+  
+.emptyCol {
+    color: white;
+    padding: 2rem;
+    border: 0.2rem dashed white;
+    margin: 1rem;
+    border-radius: 1rem;
+    display: none;
+    transition: display 200ms ease;
+}
+  
+.draggable.dragging {
+    opacity: .5;
+}
+  
+.removeBtn {
+    visibility: hidden;
+    font-size: 1rem;
+    background-color: var(--tabContent-bg-primary);
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    position: relative;
+    top: -0.7rem;
+    left: -0.7rem;
+    float: left;
+    transition: background-color 250ms ease;
+}
+  
+.removeBtn:hover {
+    background-color: tomato;
+}
+  
+.reorganizeBtn {
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+  

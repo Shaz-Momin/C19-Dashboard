@@ -24,6 +24,7 @@
    <link rel="stylesheet" type="text/css" href="css/countries-content.css" media="screen"/>
    <link rel="stylesheet" type="text/css" href="css/news.css" media="screen"/>
    <link rel="stylesheet" type="text/css" href="css/counties.css" media="screen"/>
+   <link rel="stylesheet" type="text/css" href="css/canvas.css" media="screen"/>
 
    <title>C19 Dashboard</title>
 </head>
@@ -274,28 +275,78 @@ aria-hidden="true">
 
    <main class="allSections">
       <section id="home" class="tabContent">
-         <div class="sectionPage">
-            <div class="header">
-               <div class="tag">Covid19 Api</div>
-               <div class="date">Monday, April 27 2020</div>
-               <div class="sub-head">Latest updated Statistics</div>
+         <div class="sectionPage canvasContainer">
+            <div class="canvasHeader">
+               <div class="tagDate">
+                 <div class="tag">Widgets Canvas</div>
+                  <div class="date">Monday, April 27 2020</div> 
+               </div>
+               <div class="btnContainer">
+                  <button class="addWidgetBtn">Add Widgets</button>
+               </div>
             </div>
-   
-            <div class="contentPanels">
-               <div id="active" class="GDR panel">
-                  <div class="panelTitle">Global Data Reports</div>
-                  <div class="panelSubtitle">Worldwide Combined Data of cases, deaths, recoveries </div>
-               </div>        
-      
-               <div id="" class="USbyStates panel">
-                  <div class="panelTitle">United States by States</div>
-                  <div class="panelSubtitle">Total number of positive & negative test results</div>
-               </div>
-      
-               <div id="" class="Countries panel">
-                  <div class="panelTitle">Reports By Countries</div>
-                  <div class="panelSubtitle">Total deaths, cases, & recoveries</div>
-               </div>
+            <div class="Canvas">
+               <div class="container">
+                     <div class="draggable" draggable="true">
+                        <button type="button" class="removeBtn" onclick="remove(this)">+</button>
+                        <div class="wid_header">1</div>
+                        <div class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, libero.</div>
+                     </div>
+                     <div class="draggable" draggable="true">
+                        <button type="button" class="removeBtn" onclick="remove(this)">+</button>
+                        <div class="wid_header">2</div>
+                        <div class="para">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, libero.</div>
+                     </div>
+                    
+                     <div class="emptyCol">
+                        <p>Add widgets below to utilize this empty column</p>
+                     </div>
+                  </div>
+                  <div class="container">
+                     <div class="draggable" draggable="true">
+                        <button type="button" class="removeBtn" onclick="remove(this)">+</button>
+                        <div class="wid_header">3</div>
+                        <div class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, laudantium dignissimos repellat earum ipsa hic! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, libero.</div>
+                     </div>
+                     <div class="draggable" draggable="true">
+                        <button type="button" class="removeBtn" onclick="remove(this)">+</button>
+                        <div class="wid_header">4</div>
+                        <div class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, libero.</div>
+                     </div>
+                     <div class="emptyCol">
+                        <p>Add widgets below to utilize this empty column</p>
+                     </div>
+                  </div>
+                  <div class="container">
+                     <div class="draggable" draggable="true">
+                        <button type="button" class="removeBtn" onclick="remove(this)">+</button>
+                        <div class="wid_header">5</div>
+                        <div class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas exercitationem a voluptatem quisquam neque vero recusandae quasi assumenda quo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, libero.</div>
+                     </div>
+                     <div class="draggable" draggable="true"> 
+                        <button type="button" class="removeBtn" onclick="remove(this)">+</button>
+                        <div class="wid_header">6</div>
+                        <div class="para">Lorem ipsum consectetur adipisicing elit. Ducimus, libero.</div>
+                     </div>
+                     <div class="emptyCol">
+                        <p>Add widgets below to utilize this empty column</p>
+                     </div>
+                  </div>
+                  <div class="container">
+                     <div class="draggable" draggable="true">
+                        <button type="button" class="removeBtn" onclick="remove(this)">+</button>
+                        <div class="wid_header">7</div>
+                        <div class="para">Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, libero.</div>
+                     </div>
+                     <div class="draggable" draggable="true">
+                        <button type="button" class="removeBtn" onclick="remove(this)">+</button>
+                        <div class="wid_header">8</div>
+                        <div class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam expedita assumenda sunt vero! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, libero.</div>
+                     </div>
+                     <div class="emptyCol">
+                        <p>Add widgets below to utilize this empty column</p>
+                     </div>
+                  </div>
             </div>
          </div>
       </section>
@@ -637,6 +688,7 @@ aria-hidden="true">
    <script type="text/javascript" src="main.js"></script>
    <script type="text/javascript" src="scripts/report.js"></script>
    <script type="text/javascript" src="scripts/counties.js"></script>
+   <script type="text/javascript" src="scripts/drag-drop.js"></script>
 
 
 </body> 
