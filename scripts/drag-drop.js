@@ -61,10 +61,8 @@ function emptyColMsg() {
 
 $(".draggable").hover(function() {
     $(this).find(".removeBtn").css("visibility","visible");
-    $(this).style.cursor = "move";
 }, function () {
     $(this).find(".removeBtn").css("visibility","hidden");
-    $(this).style.cursor = "default";
 })
 
 

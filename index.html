@@ -282,18 +282,19 @@ aria-hidden="true">
                   <div class="date">Monday, April 27 2020</div> 
                </div>
                <div class="btnContainer">
-                  <button class="addWidgetBtn">Add Widgets</button>
+                  <button class="addWidgetBtn" onclick="addWidget()">Add Widgets</button>
+                  <button class="plusBtn" onclick="addWidget()">&plus;</button>
                </div>
             </div>
             <div class="Canvas">
                <div class="container">
                      <div class="draggable" draggable="true">
-                        <button type="button" class="removeBtn" onclick="remove(this)">+</button>
+                        <button type="button" class="removeBtn" onclick="remove(this)">&#10005;</button>
                         <div class="wid_header">1</div>
                         <div class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, libero.</div>
                      </div>
                      <div class="draggable" draggable="true">
-                        <button type="button" class="removeBtn" onclick="remove(this)">+</button>
+                        <button type="button" class="removeBtn" onclick="remove(this)">&#10005;</button>
                         <div class="wid_header">2</div>
                         <div class="para">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, libero.</div>
                      </div>
@@ -304,12 +305,12 @@ aria-hidden="true">
                   </div>
                   <div class="container">
                      <div class="draggable" draggable="true">
-                        <button type="button" class="removeBtn" onclick="remove(this)">+</button>
+                        <button type="button" class="removeBtn" onclick="remove(this)">&#10005;</button>
                         <div class="wid_header">3</div>
                         <div class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, laudantium dignissimos repellat earum ipsa hic! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, libero.</div>
                      </div>
                      <div class="draggable" draggable="true">
-                        <button type="button" class="removeBtn" onclick="remove(this)">+</button>
+                        <button type="button" class="removeBtn" onclick="remove(this)">&#10005;</button>
                         <div class="wid_header">4</div>
                         <div class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, libero.</div>
                      </div>
@@ -319,12 +320,12 @@ aria-hidden="true">
                   </div>
                   <div class="container">
                      <div class="draggable" draggable="true">
-                        <button type="button" class="removeBtn" onclick="remove(this)">+</button>
+                        <button type="button" class="removeBtn" onclick="remove(this)">&#10005;</button>
                         <div class="wid_header">5</div>
                         <div class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas exercitationem a voluptatem quisquam neque vero recusandae quasi assumenda quo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, libero.</div>
                      </div>
                      <div class="draggable" draggable="true"> 
-                        <button type="button" class="removeBtn" onclick="remove(this)">+</button>
+                        <button type="button" class="removeBtn" onclick="remove(this)">&#10005;</button>
                         <div class="wid_header">6</div>
                         <div class="para">Lorem ipsum consectetur adipisicing elit. Ducimus, libero.</div>
                      </div>
@@ -334,12 +335,12 @@ aria-hidden="true">
                   </div>
                   <div class="container">
                      <div class="draggable" draggable="true">
-                        <button type="button" class="removeBtn" onclick="remove(this)">+</button>
+                        <button type="button" class="removeBtn" onclick="remove(this)">&#10005;</button>
                         <div class="wid_header">7</div>
                         <div class="para">Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, libero.</div>
                      </div>
                      <div class="draggable" draggable="true">
-                        <button type="button" class="removeBtn" onclick="remove(this)">+</button>
+                        <button type="button" class="removeBtn" onclick="remove(this)">&#10005;</button>
                         <div class="wid_header">8</div>
                         <div class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam expedita assumenda sunt vero! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, libero.</div>
                      </div>
@@ -667,7 +668,7 @@ aria-hidden="true">
       </section>
 
       <section id="source" class="tabContent">
-         <iframe src="/" width="100%" id="reportFrame" style="border:none"></iframe>
+         <iframe src="" width="100%" id="reportFrame" style="border:none"></iframe>
       </section>
 
    </main>

@@ -9,22 +9,31 @@ self.addEventListener('install', function(e) {
             return cache.addAll([
                 'index.html',
                 'package.json',
+                'css/canvas.css',
+                'css/counties.css',
                 'css/countries-content.css',
                 'css/GDR-content.css',
                 'css/nav.css',
                 'css/news.css',
                 'css/section.css',
                 'css/states-content.css',
+                'scripts/counties.js',
                 'scripts/countries.js',
                 'scripts/date.js',
                 'scripts/deviceCompatibility.js',
+                'scripts/drag-drop.js',
                 'scripts/index.js',
                 'scripts/nav.js',
                 'scripts/news.js',
                 'scripts/panel.js',
+                'scripts/report.js',
                 'scripts/states.js',
                 'scripts/switch.js',
-                'offline.html'
+                'offline.html',
+                'Assets/file-alt-solid.svg',
+                'Assets/poweredby_nytimes_30a.png',
+                'Assets/poweredby_nytimes_150a.png',
+                'Assets/poweredby_nytimes_150c.png'
             ]).then(function() {
                 self.skipWaiting();
             });
