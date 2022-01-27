@@ -227,11 +227,6 @@ aria-hidden="true">
             <span class="link-text">Twitter Timeline</span>
          </li>
 
-         <li class="nav-item" onclick="openPage('source', this)">
-            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="file-alt" class="svg-inline--fa fa-file-alt fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm64 236c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-64c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-72v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm96-114.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"></path></svg>
-            <span class="link-text">Source</span>
-         </li>
-
          <li class="nav-item" onclick="switchThemes(this)">
             <svg
                   xmlns:dc="http://purl.org/dc/elements/1.1/"
@@ -281,73 +276,12 @@ aria-hidden="true">
                  <div class="tag">Widgets Canvas</div>
                   <div class="date">Monday, April 27 2020</div> 
                </div>
-               <div class="btnContainer">
-                  <button class="addWidgetBtn" onclick="addWidget()">Add Widgets</button>
-                  <button class="plusBtn" onclick="addWidget()">&plus;</button>
-               </div>
+               <form class="btnContainer" target="_blank" action="https://github.com/Shaz-Momin/C19-Dashboard">
+                  <input class="addWidgetBtn" type="submit" value="View on Github"/>
+               </form>
             </div>
             <div class="Canvas">
-               <div class="container">
-                     <div class="draggable" draggable="true">
-                        <button type="button" class="removeBtn" onclick="remove(this)">&#10005;</button>
-                        <div class="wid_header">1</div>
-                        <div class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, libero.</div>
-                     </div>
-                     <div class="draggable" draggable="true">
-                        <button type="button" class="removeBtn" onclick="remove(this)">&#10005;</button>
-                        <div class="wid_header">2</div>
-                        <div class="para">Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, libero.</div>
-                     </div>
-                    
-                     <div class="emptyCol">
-                        <p>Add widgets below to utilize this empty column</p>
-                     </div>
-                  </div>
-                  <div class="container">
-                     <div class="draggable" draggable="true">
-                        <button type="button" class="removeBtn" onclick="remove(this)">&#10005;</button>
-                        <div class="wid_header">3</div>
-                        <div class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, laudantium dignissimos repellat earum ipsa hic! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, libero.</div>
-                     </div>
-                     <div class="draggable" draggable="true">
-                        <button type="button" class="removeBtn" onclick="remove(this)">&#10005;</button>
-                        <div class="wid_header">4</div>
-                        <div class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam, unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, libero.</div>
-                     </div>
-                     <div class="emptyCol">
-                        <p>Add widgets below to utilize this empty column</p>
-                     </div>
-                  </div>
-                  <div class="container">
-                     <div class="draggable" draggable="true">
-                        <button type="button" class="removeBtn" onclick="remove(this)">&#10005;</button>
-                        <div class="wid_header">5</div>
-                        <div class="para">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae quas exercitationem a voluptatem quisquam neque vero recusandae quasi assumenda quo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, libero.</div>
-                     </div>
-                     <div class="draggable" draggable="true"> 
-                        <button type="button" class="removeBtn" onclick="remove(this)">&#10005;</button>
-                        <div class="wid_header">6</div>
-                        <div class="para">Lorem ipsum consectetur adipisicing elit. Ducimus, libero.</div>
-                     </div>
-                     <div class="emptyCol">
-                        <p>Add widgets below to utilize this empty column</p>
-                     </div>
-                  </div>
-                  <div class="container">
-                     <div class="draggable" draggable="true">
-                        <button type="button" class="removeBtn" onclick="remove(this)">&#10005;</button>
-                        <div class="wid_header">7</div>
-                        <div class="para">Lorem ipsum dolor sit amet consectetur adipisicing. Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, libero.</div>
-                     </div>
-                     <div class="draggable" draggable="true">
-                        <button type="button" class="removeBtn" onclick="remove(this)">&#10005;</button>
-                        <div class="wid_header">8</div>
-                        <div class="para">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ullam expedita assumenda sunt vero! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, libero.</div>
-                     </div>
-                     <div class="emptyCol">
-                        <p>Add widgets below to utilize this empty column</p>
-                     </div>
-                  </div>
+               
             </div>
          </div>
       </section>
@@ -665,10 +599,6 @@ aria-hidden="true">
                <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/MRC_Outbreak?ref_src=twsrc%5Etfw">Tweets by MRC_Outbreak</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
             </div>
          </div>
-      </section>
-
-      <section id="source" class="tabContent">
-         <iframe src="" width="100%" id="reportFrame" style="border:none"></iframe>
       </section>
 
    </main>
